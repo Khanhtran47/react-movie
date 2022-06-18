@@ -112,8 +112,8 @@
     ".vscode",
     "api",
     "*.config.js",
-    "*.json",
-    "*.lock"
+    "*.lock",
+    "*.json"
   ],
   "plugins": ["prettier", "react", "react-hooks", "@typescript-eslint"],
   "settings": {
