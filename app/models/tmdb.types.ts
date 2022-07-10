@@ -28,12 +28,18 @@ export interface IMedia {
   originalLanguage: string;
 }
 
-export class TMDB {
+export interface IMediaList {
+  items: IMedia[];
+  page: number;
+  total_pages: number;
+}
+
+export default class TMDB {
   static readonly api_base_url = 'https://api.themoviedb.org/3/';
 
   static readonly media_base_url = 'https://image.tmdb.org/t/p/';
 
-  private static key = () => process.env.TMDB_API_KEY;
+  static key = () => process.env.TMDB_API_KEY;
 
   static mediaListUrl = (
     mediaType: 'tv' | 'movie',
